@@ -8,11 +8,9 @@
 
 
 struct BinaryHeap {
-//    DynamicArray *array;
-    vector<Data> *array;
-    virtual ~BinaryHeap();
+    DynamicArray array;
 
-    BinaryHeap();
+//    vector<Data> array;
 
     int getParent(int index);
 
@@ -25,5 +23,6 @@ struct BinaryHeap {
     void siftDown(int index);
 
     void insert(const Data &data);
+
     void removeTopElement();
 };

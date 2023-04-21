@@ -6,11 +6,7 @@
 #include "BinaryHeap.h"
 
 struct PriorityQueue {
-    BinaryHeap *heap;
-
-    virtual ~PriorityQueue();
-
-    PriorityQueue();
+    BinaryHeap heap;
 
     void push(const Data &data);
 
