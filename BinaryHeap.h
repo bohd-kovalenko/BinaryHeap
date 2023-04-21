@@ -8,9 +8,8 @@
 
 
 struct BinaryHeap {
-    DynamicArray array;
-
-//    vector<Data> array;
+//    DynamicArray array;
+    vector<Data> array;
 
     int getParent(int index);
 
@@ -20,9 +19,11 @@ struct BinaryHeap {
 
     void siftUp(int index);
 
-    void siftDown(int index);
+//    void siftDown(int index);
 
     void insert(const Data &data);
 
     void removeTopElement();
+
+    void siftDown(vector<Data> &array, int index, int heapSize);
 };
