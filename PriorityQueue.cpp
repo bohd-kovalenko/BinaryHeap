@@ -19,7 +19,6 @@ void PriorityQueue::push(const Data &data) {
 }
 
 Data PriorityQueue::top() {
-//    return heap.array.get(0);
     return heap.array[0];
 }
 

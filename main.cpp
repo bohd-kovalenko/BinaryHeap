@@ -3,6 +3,11 @@
 #include <ctime>
 #include <iostream>
 #include "PriorityQueue.h"
+#include "HeapSort.h"
+#include <algorithm>
+#include "FindNSmallestNum.h"
+
+#define elementsCount 10000000
 
 using namespace std;
 
@@ -65,6 +70,31 @@ bool testPriorityQueue() {
     return false;
 }
 
+void testHeapSort() {
+    int *heapSortArray = new int[elementsCount];
+    int *stlSortArray = new int[elementsCount];
+    int temp;
+    HeapSort sort;
+    clock_t startTime, endTime;
+    for (int i = 0; i < elementsCount; i++) {
+        temp = rand();
+        stlSortArray[i] = temp;
+        heapSortArray[i] = temp;
+    }
+    startTime = clock();
+    sort.heapSort(heapSortArray, elementsCount);
+    endTime = clock();
+    cout << "Heap sort did it in " << (endTime - startTime) / CLOCKS_PER_SEC << " secs" << endl;
+    startTime = clock();
+    std::sort(stlSortArray, stlSortArray + elementsCount);
+    endTime = clock();
+    cout << "STL sort did it in " << (endTime - startTime) / CLOCKS_PER_SEC << " secs" << endl;
+    bool result = std::equal(stlSortArray, stlSortArray + elementsCount, heapSortArray);
+    cout << result << endl;
+}
+
 int main() {
     testPriorityQueue();
+    testHeapSort();
+    return 0;
 }

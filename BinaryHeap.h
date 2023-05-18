@@ -3,13 +3,12 @@
 
 #endif //LAB2_3_BINARYHEAP_H
 
-#include "DynamicArray.h"
+#include "Data.h"
 #include "vector"
 
 
 struct BinaryHeap {
-//    DynamicArray array;
-    vector<Data> array;
+    vector <Data> array;
 
     int getParent(int index);
 
@@ -19,11 +18,13 @@ struct BinaryHeap {
 
     void siftUp(int index);
 
-//    void siftDown(int index);
+    void siftDown(int index);
 
     void insert(const Data &data);
 
     void removeTopElement();
 
-    void siftDown(vector<Data> &array, int index, int heapSize);
+    void upgradedSiftDown(int *array, int arraySize, int index);
+
+    void upgradedSiftDownVector(vector<int> &array, int arraySize, int index);
 };

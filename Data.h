@@ -14,7 +14,7 @@ struct Data {
 
     Data();
 
-        bool operator<(const Data &rhs) const;
+    bool operator<(const Data &rhs) const;
 
     bool operator>(const Data &rhs) const;
 

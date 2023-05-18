@@ -3,4 +3,4 @@ project(lab2_3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(lab2_3 main.cpp Data.h Data.cpp BinaryHeap.h BinaryHeap.cpp DynamicArray.h DynamicArray.cpp PriorityQueue.h PriorityQueue.cpp)
+add_executable(lab2_3 main.cpp Data.h Data.cpp BinaryHeap.h BinaryHeap.cpp DynamicArray.h DynamicArray.cpp PriorityQueue.h PriorityQueue.cpp HeapSort.h HeapSort.cpp FindNSmallestNum.h FindNSmallestNum.cpp)
